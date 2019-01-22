@@ -12,7 +12,16 @@
 <script>
   export default {
     name: "miroButton",
-    props: ['icon','iconPosition']
+    props: {
+      icon: {},
+      iconPosition: {
+        type: String,
+        default: 'left',
+        validator(value){
+          return ! (value !== 'left' && value !== 'right');
+        }
+      }
+    }
   }
 </script>
 <style lang="scss">
@@ -62,7 +71,6 @@
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
-    /*color: var(--color);*/
     overflow: hidden;
   }
 </style>
