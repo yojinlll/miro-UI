@@ -27,41 +27,12 @@
       margin: 50px;
     }
   </style>
-  <style>
-    .miro-button{
-      font-size: var(--font-size);
-      height: var(--button-height);
-      padding: 0 1em;
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      background: var(--button-bg);
-    }
-    .miro-button:hover{
-      border-color: var(--border-color-hover);
-    }
-    .miro-button:active{
-      background-color: var(--button-active-bg);
-    }
-    .miro-button:focus{
-      outline:none;
-    }
-  </style>
 </head>
 <body>
 <div id="app">
+  {{msg}}
   <miro-button></miro-button>
 </div>
-
-
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script src="./button.js"></script>
-<script>
-    let app = new Vue({
-      el: '#app',
-      data: {
-        msg: 'hello,miro'
-      }
-    })
-</script>
+<script src="./src/app.js"></script>
 </body>
 </html>
