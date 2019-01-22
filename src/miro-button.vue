@@ -1,8 +1,6 @@
 <template>
   <button class="miro-button" :class="{[`icon-${iconPosition}`]:true}">
-    <svg class="icon" aria-hidden="true" v-if="icon">
-      <use :xlink:href=`#i-${icon}`></use>
-    </svg>
+    <miro-icon :icon="icon"></miro-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -10,6 +8,7 @@
 </template>
 
 <script>
+  import Icon from './miro-icon'
   export default {
     name: "miroButton",
     props: {
@@ -21,6 +20,9 @@
           return ! (value !== 'left' && value !== 'right');
         }
       }
+    },
+    components: {
+      'miro-icon': Icon
     }
   }
 </script>

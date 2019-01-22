@@ -1,5 +1,6 @@
 import Vue from '../node_modules/vue/dist/vue.min.js'
 import Button from './miro-button.vue'
+import Icon from './miro-icon.vue'
 
 Vue.component('miro-button', Button)
 
