@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/yojinlll/miro-UI/issues"
   },
-  "homepage": "https://github.com/yojinlll/miro-UI#readme"
+  "homepage": "https://github.com/yojinlll/miro-UI#readme",
+  "dependencies": {
+    "vue": "^2.5.22"
+  }
 }
