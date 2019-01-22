@@ -7,23 +7,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>miro-UI</title>
   <style>
-    *{
+    * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
-    :root{
+
+    :root {
       --button-height: 32px;
       --font-size: 14px;
       --button-bg: white;
       --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
+      --border-radius: 6px;
+      --color: #444;
       --border-color: #999;
       --border-color-hover: #666;
     }
-    body{
+
+    body {
       font-size: var(--font-size);
     }
-    #app{
+
+    #app {
       margin: 50px;
     }
   </style>
@@ -31,8 +34,11 @@
 <body>
 <div id="app">
   {{msg}}
-  <miro-button></miro-button>
+  <miro-button icon="settings" icon-position="undefined">设置</miro-button>
+  <miro-button icon="left" icon-position="left">左</miro-button>
+  <miro-button icon="right" icon-position="right">右</miro-button>
 </div>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_828113_yto9heyjmf.js"></script>
 </body>
 </html>
