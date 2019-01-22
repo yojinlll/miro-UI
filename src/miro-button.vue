@@ -1,6 +1,7 @@
 <template>
-  <button class="miro-button" :class="{[`icon-${iconPosition}`]:true}">
-    <miro-icon :icon="icon"></miro-icon>
+  <button class="miro-button" :class="{[`icon-${iconPosition}`]:true}" @click="onToggle">
+    <miro-icon icon="loading" v-if="toggle"></miro-icon>
+    <miro-icon :icon="icon" v-else></miro-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -9,15 +10,32 @@
 
 <script>
   import Icon from './miro-icon'
+
   export default {
     name: "miroButton",
+    data(){
+      return {
+        toggle: false
+      }
+    },
     props: {
       icon: {},
+      loading: {
+        type: Boolean,
+        default: false
+      },
       iconPosition: {
         type: String,
         default: 'left',
         validator(value){
-          return ! (value !== 'left' && value !== 'right');
+          return ! (value !== 'left' && value !== 'right')
+        }
+      }
+    },
+    methods:{
+      onToggle(){
+        if(this.loading){
+          this.toggle = !this.toggle
         }
       }
     },
@@ -27,7 +45,7 @@
   }
 </script>
 <style lang="scss">
-  .miro-button{
+  .miro-button {
     font-size: var(--font-size);
     height: var(--button-height);
     padding: 0 1em;
@@ -37,42 +55,22 @@
     color: var(--color);
     display: inline-flex; justify-content: center; align-items: center;
     vertical-align: middle;
-    &:hover{
+    &:hover {
       border-color: var(--border-color-hover);
     }
-    &:active{
+    &:active {
       background-color: var(--button-active-bg);
     }
-    &:focus{
-      outline:none;
+    &:focus {
+      outline: none;
     }
 
-    > .icon{
-      order: 1;
-      margin-right: .3em;
+    > .icon {order: 1; margin-right: .3em;}
+    > .content {order: 2;}
+
+    &.icon-right {
+      > .icon {order: 2;margin-right: 0;margin-left: .3em;}
+      > .content {order: 1;}
     }
-    > .content{
-      order: 2;
-    }
-
-    &.icon-right{
-      > .icon{
-        order: 2;
-        margin-right: 0;
-        margin-left: .3em;
-      }
-      > .content{
-        order: 1;
-      }
-    }
-
-
-  }
-
-  .icon {
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
   }
 </style>

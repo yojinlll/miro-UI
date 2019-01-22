@@ -1,6 +1,6 @@
 <template>
   <svg class="icon" aria-hidden="true"
-       :class="{loading: icon === 'loading'}"
+       :class="{loading: icon==='loading'}"
        v-if="icon"
   >
     <use :xlink:href=`#i-${icon}`></use>
@@ -11,7 +11,7 @@
   export default {
     name: "miroIcon",
     props: {
-      icon: String
+      icon: String,
     }
   }
 </script>
@@ -21,8 +21,14 @@
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
   }
-  .loading{
-    animation: spin 1s infinite linear;
+
+  .loading {animation: spin 1s infinite linear;}
+
+  .icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
   }
 
 </style>
