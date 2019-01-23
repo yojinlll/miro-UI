@@ -20,6 +20,9 @@ new Vue({
 
 
 import chai from 'chai'
+import spies from 'chai-spies'
+
+chai.use(spies)
 
 const expect = chai.expect
 const assert = chai.assert
@@ -45,11 +48,13 @@ const assert = chai.assert
       loading: true
     }
   })
-  button.toggle = true
   button.$mount()
-  let use = button.$el.querySelector('use')
-  let icon = use.getAttribute('xlink:href')
-  assert.equal(icon, '#i-loading')
+  button.onToggle()
+  button.$nextTick(()=>{
+    let use = button.$el.querySelector('use')
+    let icon = use.getAttribute('xlink:href')
+    assert.equal(icon, '#i-loading')
+  })
   button.$el.remove()
   button.$destroy
 }
@@ -87,21 +92,17 @@ const assert = chai.assert
   button.$destroy
 }
 {
-  // const Constructor = Vue.extend(Button)
-  // const clickButton = new Constructor({
-  //   propsData: {
-  //     icon: 'settings',
-  //     loading: true
-  //   }
-  // })
-  // clickButton.$mount()
-  // clickButton.onToggle()
-  // clickButton.$nextTick(() => {
-  //     let use = clickButton.$el.querySelector('use')
-  //     let icon = use.getAttribute('xlink:href')
-  //     assert.equal(icon,'#i-loading')
-  //   }
-  // )
-  // clickButton.$el.remove()
-  // clickButton.$destroy
+  const Constructor = Vue.extend(Button)
+  const clickButton = new Constructor({
+    propsData: {
+      icon: 'settings',
+    }
+  })
+  clickButton.$mount()
+  let spy = chai.spy(function (){})
+  clickButton.$on('click',spy)
+  clickButton.$emit('click')
+  expect(spy).to.have.been.called()
+  clickButton.$el.remove()
+  clickButton.$destroy
 }
