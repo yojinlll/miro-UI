@@ -55,21 +55,27 @@
     color: var(--color);
     display: inline-flex; justify-content: center; align-items: center;
     vertical-align: middle;
+    cursor: pointer;
+
     &:hover {
+      position: relative;
       border-color: var(--border-color-hover);
+      z-index: 1;
     }
     &:active {
+      position: relative;
       background-color: var(--button-active-bg);
+      z-index: 1;
     }
     &:focus {
       outline: none;
     }
 
-    > .icon {order: 1; margin-right: .3em;}
+    > .miro-icon {order: 1; margin-right: .3em;}
     > .content {order: 2;}
 
     &.icon-right {
-      > .icon {order: 2;margin-right: 0;margin-left: .3em;}
+      > .miro-icon {order: 2;margin-right: 0;margin-left: .3em;}
       > .content {order: 1;}
     }
   }

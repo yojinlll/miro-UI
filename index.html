@@ -36,9 +36,14 @@
   <div style="margin-bottom: 50px;">
     {{msg}}
   </div>
-  <miro-button icon="info" loading>设置</miro-button>
-  <miro-button icon="left"  icon-position="left">左</miro-button>
-  <miro-button icon="right" icon-position="right">右</miro-button>
+  <miro-button icon="settings" loading>设置</miro-button>
+  <miro-button icon="info">提示</miro-button>
+  <miro-button icon="error">错误</miro-button>
+  <miro-button-group>
+    <miro-button icon="left">上一页</miro-button>
+    <miro-button>返回</miro-button>
+    <miro-button icon="right" icon-position="right">下一页</miro-button>
+  </miro-button-group>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_828113_yto9heyjmf.js"></script>

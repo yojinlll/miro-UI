@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" aria-hidden="true"
+  <svg class="miro-icon" aria-hidden="true"
        :class="{loading: icon==='loading'}"
        v-if="icon"
   >
@@ -24,7 +24,7 @@
 
   .loading {animation: spin 1s infinite linear;}
 
-  .icon {
+  .miro-icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
