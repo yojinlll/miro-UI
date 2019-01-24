@@ -3,7 +3,6 @@ import Button from './miro-button.vue'
 import ButtonGroup from './miro-button-group'
 
 import '../test/button-test'
-// import '../test/miro-button.test'
 
 Vue.component('miro-button', Button)
 Vue.component('miro-button-group', ButtonGroup)

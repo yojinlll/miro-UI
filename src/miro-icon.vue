@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import './svg.js'
   export default {
     name: "miroIcon",
     props: {
