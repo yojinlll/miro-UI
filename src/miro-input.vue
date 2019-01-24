@@ -1,6 +1,11 @@
 <template>
   <div class="miro-input" :class="{error}">
-    <input type="text" :value="value" :disabled="disabled" :readonly="readonly">
+    <input type="text" :value="value" :disabled="disabled" :readonly="readonly"
+           @change="$emit('change', $event.target.value)"
+           @input="$emit('input', $event.target.value)"
+           @focus="$emit('focus', $event.target.value)"
+           @blur="$emit('blur', $event.target.value)"
+    >
     <template v-if="error">
       <miro-icon class="icon-error" icon="error"></miro-icon>
       <span class="error-msg">{{error}}</span>
@@ -32,6 +37,14 @@
     },
     components: {
       'miro-icon': Icon
+    },
+    mounted(){
+      // this.$on('change', (e) => {       // change input focus blur
+      //   // console.log(e)
+      // })
+    },
+    methods: {
+
     }
   }
 </script>

@@ -4,6 +4,7 @@ import ButtonGroup from './miro-button-group'
 import Input from './miro-input'
 
 import '../test/button-test'
+import '../test/input-test'
 
 Vue.component('miro-button', Button)
 Vue.component('miro-button-group', ButtonGroup)
@@ -16,8 +17,8 @@ new Vue({
     load: true
   },
   methods: {
-    log(){
-      alert(1)
+    log(e){
+      console.log(e,111)
     }
   }
 })
