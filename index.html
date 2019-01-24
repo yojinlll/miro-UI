@@ -7,10 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>miro-UI</title>
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     :root {
       --button-height: 32px;
       --font-size: 14px;
@@ -22,31 +19,47 @@
       --border-color-hover: #666;
     }
 
-    body {
-      font-size: var(--font-size);
-    }
-
+    body {font-size: var(--font-size);}
     #app {margin: 50px;}
-    [v-cloak]{
-      display: none;
-    }
+    [v-cloak]{display: none;}
+  </style>
+  <style>
+    .box{margin-bottom: 50px;}
+    .box .box-input{margin-bottom: 20px; display: flex;}
+    .box .box-input .miro-input:first-child{margin-right: 20px}
   </style>
 </head>
 <body>
 <div id="app" v-cloak>
-  <div style="margin-bottom: 50px;">
-    {{msg}}
-  </div>
-  <miro-button icon="settings" loading>设置</miro-button>
-  <miro-button icon="info">提示</miro-button>
-  <miro-button icon="error">错误</miro-button>
-  <miro-button-group>
-    <miro-button icon="left">上一页</miro-button>
-    <miro-button>返回</miro-button>
-    <miro-button icon="right" icon-position="right">下一页</miro-button>
-  </miro-button-group>
 
-  <div id="test"></div>
+  <h1 style="margin-bottom: 50px; color: darkolivegreen">
+    {{msg}}
+  </h1>
+
+  <div class="box">
+    <miro-button icon="settings" loading>设置</miro-button>
+    <miro-button icon="info">提示</miro-button>
+    <miro-button icon="error">错误</miro-button>
+
+    <miro-button-group>
+      <miro-button icon="left">上一页</miro-button>
+      <miro-button>返回</miro-button>
+      <miro-button icon="right" icon-position="right">下一页</miro-button>
+    </miro-button-group>
+
+  </div>
+
+  <div class="box">
+    <div class="box-input">
+      <miro-input value="hello,miro"></miro-input>
+      <miro-input readonly value="readonly"></miro-input>
+    </div>
+    <div class="box-input">
+      <miro-input disabled value="disabled"></miro-input>
+      <miro-input error="密码错误哟"></miro-input>
+    </div>
+  </div>
+
 </div>
 <script src="./src/app.js"></script>
 </body>

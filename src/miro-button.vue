@@ -44,13 +44,13 @@
     }
   }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .miro-button {
     font-size: var(--font-size);
     height: var(--button-height);
     padding: 0 1em;
     border-radius: var(--border-radius);
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     background: var(--button-bg);
     color: var(--color);
     display: inline-flex; justify-content: center; align-items: center;
