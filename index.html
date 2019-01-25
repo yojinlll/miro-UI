@@ -25,14 +25,20 @@
   </style>
   <style>
     .box{margin-bottom: 50px;}
+    .box .miro-button{margin-bottom: 20px;}
     .box .box-input{margin-bottom: 20px; display: flex;}
     .box .box-input .miro-input:first-child{margin-right: 20px}
+
+    @media (max-width: 500px) {
+      .box .miro-input{margin-bottom: 20px;}
+      .box .box-input{margin-bottom: 20px; display: block;}
+    }
   </style>
 </head>
 <body>
 <div id="app" v-cloak>
 
-  <h1 style="margin-bottom: 50px; color: darkolivegreen">
+  <h1 style="height: 50px; margin-bottom: 50px; color: darkolivegreen">
     {{msg}}
   </h1>
 
@@ -46,18 +52,36 @@
       <miro-button>返回</miro-button>
       <miro-button icon="right" icon-position="right">下一页</miro-button>
     </miro-button-group>
-
   </div>
 
   <div class="box">
     <div class="box-input">
-      <miro-input value="hello,miro"></miro-input>
+      <miro-input value="hello,miro" @input="log"></miro-input>
       <miro-input readonly value="readonly"></miro-input>
     </div>
     <div class="box-input">
       <miro-input disabled value="disabled"></miro-input>
       <miro-input error="密码错误哟"></miro-input>
     </div>
+  </div>
+
+  <div class="box" style="text-align: center; ">
+    <miro-row>
+      <miro-col>span</miro-col>
+    </miro-row>
+    <miro-row>
+      <miro-col>span</miro-col>
+      <miro-col>span</miro-col>
+    </miro-row>
+    <miro-row>
+      <miro-col>span</miro-col>
+      <miro-col>span</miro-col>
+      <miro-col>span</miro-col>
+    </miro-row>
+    <miro-row>
+      <miro-col span="2">span</miro-col>
+      <miro-col span="22">span</miro-col>
+    </miro-row>
   </div>
 
 </div>

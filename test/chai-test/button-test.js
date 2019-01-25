@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Button from '../src/miro-button'
+import Button from '../../src/miro-button'
 
 import chai from 'chai'
 import spies from 'chai-spies'

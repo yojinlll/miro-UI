@@ -39,9 +39,9 @@
       'miro-icon': Icon
     },
     mounted(){
-      // this.$on('change', (e) => {       // change input focus blur
-      //   // console.log(e)
-      // })
+      this.$on('change', (e) => {       // change input focus blur
+        // console.log(e)
+      })
     },
     methods: {
 
