@@ -6,7 +6,12 @@
 
 <script>
   export default {
-    name: "miroRow"
+    name: "miroRow",
+    props: {
+      gutter: {
+        type: [Number,String]
+      }
+    }
   }
 </script>
 
