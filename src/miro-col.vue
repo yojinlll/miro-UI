@@ -27,31 +27,42 @@
           offset && `offset-${offset}`,
         ]
 
-        if (typeof phone === 'object') {
-          classArray.push(
-            phone.span && `phone-span-${phone.span}`,
-            phone.offset && `phone-offset-${phone.offset}`
-          )
-        }else {
-          classArray.push(
-            phone && `phone-span-${phone}`
-          )
-        }
-
-        if (typeof ipad === 'object') {
-          classArray.push(
-            ipad.span && `ipad-span-${ipad.span}`,
-            ipad.offset && `ipad-offset-${ipad.offset}`
-          )
-        }else {
-          classArray.push(
-            ipad && `ipad-span-${ipad}`
-          )
-        }
-
+        this.createClass(phone,classArray,'phone')
+        this.createClass(ipad,classArray,'ipad')
+        this.validator()
         return classArray
-      },
+      }
     },
+    methods: {
+      createClass(obj,array,str){
+        if (typeof obj === 'object') {
+          array.push(
+            obj.span && `${str}-span-${obj.span}`,
+            obj.offset && `${str}-offset-${obj.offset}`
+          )
+        }else {
+          array.push(
+            obj && `${str}-span-${obj}`
+          )
+        }
+      },
+      validator(){
+        let {phone, ipad} = this
+        let array = [phone, ipad]
+        array.forEach((item) => {
+          if (typeof item === 'object') {
+            let keys = Object.keys(item)
+            let valid = true
+            keys.forEach(key => {
+              if (! ['span', 'offset'].includes(key)) {
+                valid = false
+              }
+            })
+            if(!valid) {console.error('组件 props 里的 phone 和 ipad 中应该存在 span 属性或 offset 属性')}
+          }
+        })
+      }
+    }
   }
 </script>
 
