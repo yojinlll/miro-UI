@@ -32,13 +32,21 @@
     .box .miro-button {margin-bottom: 20px;}
 
     .box .box-input {margin-bottom: 20px; display: flex;}
+
     .box .box-input .miro-input:first-child {margin-right: 20px}
 
-    .box .row-box{margin-bottom: 5px}
+    .box .row-box {margin-bottom: 5px}
+
     .box .miro-row .miro-col {background: lightblue;height: 50px;border: 1px solid #6c6c6c;}
+
+    .box .aside{width: 100px; background: coral;}
+    .box .header{min-height: 70px; background: indianred;}
+    .box .content{ background: palegreen; flex: 1;}
+    .box .footer{min-height: 70px; background: blueviolet;}
 
     @media (max-width: 500px) {
       .box .miro-input {margin-bottom: 20px;}
+
       .box .box-input {margin-bottom: 20px; display: block;}
     }
   </style>
@@ -75,28 +83,41 @@
 
   <div class="box" style="text-align: center; ">
     <miro-row class="row-box">
-      <miro-col></miro-col>
+      <miro-col span="24"></miro-col>
     </miro-row>
     <miro-row gutter="5" class="row-box">
-      <miro-col></miro-col>
-      <miro-col></miro-col>
+      <miro-col span="22" phone="24"></miro-col>
+      <miro-col span="2" phone="24"></miro-col>
     </miro-row>
     <miro-row gutter="5" class="row-box">
-      <miro-col phone="8"></miro-col>
-      <miro-col phone="8"></miro-col>
-      <miro-col phone="8"></miro-col>
+      <miro-col phone="24" span="18"></miro-col>
+      <miro-col phone="24" span="3"></miro-col>
+      <miro-col phone="24" span="3"></miro-col>
+    </miro-row>
+    <miro-row class="row-box">
+      <miro-col span="20" ipad="4" phone="24"></miro-col>
+      <miro-col span="4" ipad="20" phone="24"></miro-col>
     </miro-row>
     <miro-row gutter="5" class="row-box">
-      <miro-col span="20"></miro-col>
-      <miro-col span="4"></miro-col>
-    </miro-row>
-    <miro-row gutter="5" class="row-box">
-      <miro-col span="8" phone="12" ipad="2"></miro-col>
-      <miro-col span="8" :phone="{span: 5}" :ipad="{span:2}"></miro-col>
-      <miro-col span="8" phone="7" :ipad="{span: 18, offset: 2}"></miro-col>
+      <miro-col span="24" phone="11" ipad="2"></miro-col>
+      <miro-col span="24" :phone="{span:4, offset: 2}" :ipad="{span:2}"></miro-col>
+      <miro-col span="24" phone="7" :ipad="{span: 18, offset: 2}"></miro-col>
     </miro-row>
   </div>
 
+  <div class="box" style="text-align: center; ">
+    <miro-layout style="height: 50vh;">
+
+      <miro-aside class="aside">aside</miro-aside>
+
+      <miro-layout>
+        <miro-header class="header">header</miro-header>
+        <miro-content class="content">content</miro-content>
+        <miro-footer class="footer">footer</miro-footer>
+      </miro-layout>
+
+    </miro-layout>
+  </div>
 </div>
 <script src="./src/app.js"></script>
 </body>

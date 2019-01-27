@@ -2,7 +2,7 @@
   <button class="miro-button" :class="{[`icon-${iconPosition}`]:true}" @click="onToggle">
     <miro-icon icon="loading" v-if="toggle"></miro-icon>
     <miro-icon :icon="icon" v-else></miro-icon>
-    <div class="content">
+    <div class="miro-button-content">
       <slot></slot>
     </div>
   </button>
@@ -72,11 +72,11 @@
     }
 
     > .miro-icon {order: 1; margin-right: .3em;}
-    > .content {order: 2;}
+    > .miro-button-content {order: 2;}
 
     &.icon-right {
       > .miro-icon {order: 2;margin-right: 0;margin-left: .3em;}
-      > .content {order: 1;}
+      > .miro-button-content {order: 1;}
     }
   }
 </style>

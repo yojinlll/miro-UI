@@ -68,7 +68,7 @@
 
 <style lang="scss" scoped>
   .miro-col {
-    width: 100%;
+    /*width: 50%;*/
     $class-prefix: gutter-;
     @for $n from 1 through 100 {
       &.#{$class-prefix}#{$n}:not(:last-child) {
