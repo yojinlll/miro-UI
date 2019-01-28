@@ -1,7 +1,9 @@
 import Vue from 'vue'
+
 import Button from './miro-button.vue'
 import ButtonGroup from './miro-button-group'
 import Input from './miro-input'
+
 import Row from './miro-row'
 import Col from './miro-col'
 
@@ -10,6 +12,9 @@ import Header from './miro-header'
 import Aside from './miro-aside'
 import Content from './miro-content'
 import Footer from './miro-footer'
+
+import toast from "./toastPlugin"
+Vue.use(toast)
 
 
 Vue.component('miro-button', Button)
@@ -26,6 +31,8 @@ Vue.component('miro-footer', Footer)
 
 import '../test/chai-test/chai-test.js'
 
+
+
 new Vue({
   el: '#app',
   data: {
@@ -39,9 +46,12 @@ new Vue({
     // })
   },
   methods: {
-    log(e){
-      this.msg = e
+    log(){
+      this.$toast('hello,miro', {
+        autoClose: true,
+        showClose: true,
+        position: 'middle'
+      })
     },
-
   }
 })

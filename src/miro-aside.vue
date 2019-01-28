@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade" mode="out-in">
+  <transition name="fade">
     <div class="miro-aside" v-if="visible" ref="aside" :style="hideStyle">
       <slot></slot>
       <button class="button" @click="onHide">X</button>
@@ -45,7 +45,6 @@
   }
 
   .fade-enter, .fade-leave-to {
-    margin-left: -100px;
     opacity: 0;
   }
 </style>

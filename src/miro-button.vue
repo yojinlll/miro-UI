@@ -34,6 +34,7 @@
     },
     methods:{
       onToggle(){
+        this.$emit('click')
         if(this.loading){
           this.toggle = !this.toggle
         }

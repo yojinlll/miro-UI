@@ -61,7 +61,7 @@
   <div class="box">
     <miro-button icon="settings" loading>设置</miro-button>
     <miro-button icon="info">提示</miro-button>
-    <miro-button icon="error">错误</miro-button>
+    <miro-button icon="error" @click="log">错误</miro-button>
 
     <miro-button-group>
       <miro-button icon="left">上一页</miro-button>
@@ -105,19 +105,24 @@
     </miro-row>
   </div>
 
-  <div class="box" style="text-align: center; ">
-    <miro-layout style="height: 50vh;">
+  <!--<div class="box" style="text-align: center; ">-->
+    <!--<miro-layout style="height: 50vh;">-->
 
-      <miro-aside class="aside">aside</miro-aside>
+      <!--<miro-aside class="aside">aside</miro-aside>-->
 
-      <miro-layout>
-        <miro-header class="header">header</miro-header>
-        <miro-content class="content">content</miro-content>
-        <miro-footer class="footer">footer</miro-footer>
-      </miro-layout>
+      <!--<miro-layout>-->
+        <!--<miro-header class="header">header</miro-header>-->
+        <!--<miro-content class="content">content</miro-content>-->
+        <!--<miro-footer class="footer">footer</miro-footer>-->
+      <!--</miro-layout>-->
 
-    </miro-layout>
+    <!--</miro-layout>-->
+  <!--</div>-->
+
+  <div class="box">
+    <miro-button @click="log"> click </miro-button>
   </div>
+
 </div>
 <script src="./src/app.js"></script>
 </body>
