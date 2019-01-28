@@ -50,7 +50,7 @@ new Vue({
       this.$toast('hello,miro', {
         autoClose: true,
         showClose: true,
-        position: 'middle'
+        position: 'bottom'
       })
     },
   }
