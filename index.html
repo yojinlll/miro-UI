@@ -61,7 +61,7 @@
   <div class="box">
     <miro-button icon="settings" loading>设置</miro-button>
     <miro-button icon="info">提示</miro-button>
-    <miro-button icon="error" @click="log">错误</miro-button>
+    <miro-button icon="error">错误</miro-button>
 
     <miro-button-group>
       <miro-button icon="left">上一页</miro-button>
@@ -120,7 +120,9 @@
   <!--</div>-->
 
   <div class="box">
-    <miro-button @click="log"> click </miro-button>
+    <miro-button @click="createToast1"> click </miro-button>
+    <miro-button @click="createToast2"> click </miro-button>
+    <miro-button @click="createToast3"> click </miro-button>
   </div>
 
 </div>

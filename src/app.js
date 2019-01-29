@@ -46,9 +46,19 @@ new Vue({
     // })
   },
   methods: {
-    log(){
+    createToast1(){
       this.$toast('hello,miro', {
-        autoClose: true,
+        showClose: true,
+      })
+    },
+    createToast2(){
+      this.$toast('hello,miro', {
+        showClose: true,
+        position: 'middle'
+      })
+    },
+    createToast3(){
+      this.$toast('hello,miro', {
         showClose: true,
         position: 'bottom'
       })

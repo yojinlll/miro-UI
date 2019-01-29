@@ -49,7 +49,7 @@
     },
     data(){
       return {
-        //动画激活
+        //动画类名激活
         isActive: {
           enter: true,
           leave: false
@@ -90,11 +90,13 @@
       },
       onClose(time){
         setTimeout(() => {
-          // 添加类名调用动画
+          // 激活动画类名
           this.isActive.leave = true
           setTimeout(() => {
             this.$el.remove()
             this.$destroy()
+
+            // 300毫秒是动画持续时间，耦合了。
           }, 300)
         }, time)
       },
@@ -107,7 +109,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $time: .3s;
+  $time:.3s;
 
   .miro-toast {
     display: inline-flex;
