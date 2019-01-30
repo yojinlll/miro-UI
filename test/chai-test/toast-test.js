@@ -38,7 +38,6 @@ const expect = chai.expect
   },500)
 }
 {
-  let spy = chai.spy(function (){})
   const Constructor = Vue.extend(Toast)
   const vm = new Constructor({
     propsData:{

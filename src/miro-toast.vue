@@ -44,6 +44,10 @@
         type: Function,
         default(){
         }
+      },
+      only: {
+        type: Boolean,
+        default: false
       }
 
     },

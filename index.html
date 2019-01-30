@@ -72,7 +72,7 @@
 
   <div class="box">
     <div class="box-input">
-      <miro-input value="hello,miro" @input="log"></miro-input>
+      <miro-input v-model="msg" @test="log"></miro-input>
       <miro-input readonly value="readonly"></miro-input>
     </div>
     <div class="box-input">
@@ -120,9 +120,22 @@
   <!--</div>-->
 
   <div class="box">
-    <miro-button @click="createToast1"> click </miro-button>
-    <miro-button @click="createToast2"> click </miro-button>
-    <miro-button @click="createToast3"> click </miro-button>
+    <miro-button @click="createToast1"> top </miro-button>
+    <miro-button @click="createToast2"> middle </miro-button>
+    <miro-button @click="createToast3"> bottom </miro-button>
+  </div>
+
+  <div class="box">
+    <miro-tabs :select="text" @update:select="text = $event">
+      <miro-tabs-head>
+        <miro-tabs-item>boo</miro-tabs-item>
+      </miro-tabs-head>
+      <miro-tabs-body>
+        <miro-tabs-pane>
+          miro-boo
+        </miro-tabs-pane>
+      </miro-tabs-body>
+    </miro-tabs>
   </div>
 
 </div>
