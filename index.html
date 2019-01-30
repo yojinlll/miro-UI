@@ -39,10 +39,13 @@
 
     .box .miro-row .miro-col {background: lightblue;height: 50px;border: 1px solid #6c6c6c;}
 
-    .box .aside{width: 100px; background: coral;}
-    .box .header{min-height: 70px; background: indianred;}
-    .box .content{ background: palegreen; flex: 1;}
-    .box .footer{min-height: 70px; background: blueviolet;}
+    .box .aside {width: 100px; background: coral;}
+
+    .box .header {min-height: 70px; background: indianred;}
+
+    .box .content { background: palegreen; flex: 1;}
+
+    .box .footer {min-height: 70px; background: blueviolet;}
 
     @media (max-width: 500px) {
       .box .miro-input {margin-bottom: 20px;}
@@ -106,35 +109,82 @@
   </div>
 
   <!--<div class="box" style="text-align: center; ">-->
-    <!--<miro-layout style="height: 50vh;">-->
+  <!--<miro-layout style="height: 50vh;">-->
 
-      <!--<miro-aside class="aside">aside</miro-aside>-->
+  <!--<miro-aside class="aside">aside</miro-aside>-->
 
-      <!--<miro-layout>-->
-        <!--<miro-header class="header">header</miro-header>-->
-        <!--<miro-content class="content">content</miro-content>-->
-        <!--<miro-footer class="footer">footer</miro-footer>-->
-      <!--</miro-layout>-->
+  <!--<miro-layout>-->
+  <!--<miro-header class="header">header</miro-header>-->
+  <!--<miro-content class="content">content</miro-content>-->
+  <!--<miro-footer class="footer">footer</miro-footer>-->
+  <!--</miro-layout>-->
 
-    <!--</miro-layout>-->
+  <!--</miro-layout>-->
   <!--</div>-->
 
   <div class="box">
-    <miro-button @click="createToast1"> top </miro-button>
-    <miro-button @click="createToast2"> middle </miro-button>
-    <miro-button @click="createToast3"> bottom </miro-button>
+    <miro-button @click="createToast1"> top</miro-button>
+    <miro-button @click="createToast2"> middle</miro-button>
+    <miro-button @click="createToast3"> bottom</miro-button>
   </div>
 
   <div class="box">
-    <miro-tabs :select="text" @update:select="text = $event">
-      <miro-tabs-head>
-        <miro-tabs-item>boo</miro-tabs-item>
+    <miro-tabs :select.sync="text">
+      <miro-tabs-head slot="head">
+        <miro-tabs-item name="boo">boo-噢噢噢噢</miro-tabs-item>
+        <miro-tabs-item name="foo">foo-啊啊啊啊</miro-tabs-item>
+        <miro-tabs-item name="uno">uno-哈哈哈哈航啊</miro-tabs-item>
+        <miro-tabs-item name="opp">opp-哟哟哦也</miro-tabs-item>
       </miro-tabs-head>
-      <miro-tabs-body>
-        <miro-tabs-pane>
-          miro-boo
-        </miro-tabs-pane>
-      </miro-tabs-body>
+
+      <miro-tabs-pane name="boo">
+        miro-啊啊啊
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+      </miro-tabs-pane>
+      <miro-tabs-pane name="foo">
+        miro-发发发发发
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+      </miro-tabs-pane>
+      <miro-tabs-pane name="uno">
+        miro-呵呵呵呵呵
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+      </miro-tabs-pane>
+      <miro-tabs-pane name="opp">
+        miro-噢噢噢噢
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+        小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪小笨猪
+      </miro-tabs-pane>
     </miro-tabs>
   </div>
 

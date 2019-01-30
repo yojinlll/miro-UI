@@ -16,6 +16,11 @@ import Footer from './miro-footer'
 import toast from "./toastPlugin"
 Vue.use(toast)
 
+import Tabs from './miro-tabs'
+import TabsHead from './miro-tabs-head'
+import TabsItem from './miro-tabs-item'
+import TabsPane from './miro-tabs-pane'
+
 
 Vue.component('miro-button', Button)
 Vue.component('miro-button-group', ButtonGroup)
@@ -29,15 +34,20 @@ Vue.component('miro-aside', Aside)
 Vue.component('miro-content', Content)
 Vue.component('miro-footer', Footer)
 
-import '../test/chai-test/chai-test.js'
+Vue.component('miro-tabs',Tabs)
+Vue.component('miro-tabs-head',TabsHead)
+Vue.component('miro-tabs-item',TabsItem)
+Vue.component('miro-tabs-pane',TabsPane)
 
-
+// 测试
+// import '../test/chai-test/chai-test.js'
 
 new Vue({
   el: '#app',
   data: {
     msg: 'hello,miro',
-    load: true
+    load: true,
+    text: 'boo'
   },
   mounted(){
     // console.log(this.$children[4])
@@ -46,6 +56,10 @@ new Vue({
     // })
   },
   methods: {
+    log(e){
+      console.log(e)
+      this.text = e
+    },
     createToast1(){
       this.$toast('hello,miro', {
         showClose: true,
@@ -54,13 +68,13 @@ new Vue({
     createToast2(){
       this.$toast('hello,miro', {
         showClose: true,
-        position: 'middle'
+        position: 'middle',
       })
     },
     createToast3(){
       this.$toast('hello,miro', {
         showClose: true,
-        position: 'bottom'
+        position: 'bottom',
       })
     },
   }
