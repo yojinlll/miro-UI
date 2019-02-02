@@ -21,6 +21,8 @@ import TabsHead from './miro-tabs-head'
 import TabsItem from './miro-tabs-item'
 import TabsPane from './miro-tabs-pane'
 
+import Popover from './miro-popover'
+
 
 Vue.component('miro-button', Button)
 Vue.component('miro-button-group', ButtonGroup)
@@ -38,6 +40,8 @@ Vue.component('miro-tabs',Tabs)
 Vue.component('miro-tabs-head',TabsHead)
 Vue.component('miro-tabs-item',TabsItem)
 Vue.component('miro-tabs-pane',TabsPane)
+
+Vue.component('miro-popover',Popover)
 
 // 测试
 // import '../test/chai-test/chai-test.js'
