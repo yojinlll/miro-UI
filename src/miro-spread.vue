@@ -32,22 +32,25 @@
         return `${+this.duration}ms width ease-in-out, ${+this.duration}ms padding-left ease-in-out, ${+this.duration}ms padding-right ease-in-out`;
       }
     },
+    mounted(){
+      console.log(2222)
+    },
     methods: {
       beforeEnter(el) {
         if (this.horizontal) {
           el.style.transition = this.horizontalTransition;
           this.dataset.oldPaddingLeft = el.style.paddingLeft;
           this.dataset.oldPaddingRight = el.style.paddingRight;
-          el.style.width = '0';
-          el.style.paddingLeft = '0';
-          el.style.paddingRight = '0';
+          el.style.width = 0;
+          el.style.paddingLeft = 0;
+          el.style.paddingRight = 0;
         } else {
           el.style.transition = this.verticalTransition;
           this.dataset.oldPaddingTop = el.style.paddingTop;
           this.dataset.oldPaddingBottom = el.style.paddingBottom;
-          el.style.height = '0';
-          el.style.paddingTop = '0';
-          el.style.paddingBottom = '0';
+          el.style.height = 0;
+          el.style.paddingTop = 0;
+          el.style.paddingBottom = 0;
         }
       },
       enter(el) {
@@ -68,6 +71,8 @@
           }
           el.style.paddingTop = this.dataset.oldPaddingTop;
           el.style.paddingBottom = this.dataset.oldPaddingBottom;
+          console.log(el.style.paddingLeft,44444)
+          console.log(44444)
         }
         el.style.overflow = 'hidden';
       },
@@ -93,16 +98,16 @@
         if (this.horizontal) {
           if (el.scrollWidth !== 0) {
             el.style.transition = this.horizontalTransition;
-            el.style.width = '0';
-            el.style.paddingLeft = '0';
-            el.style.paddingRight = '0';
+            el.style.width = 0;
+            el.style.paddingLeft = 0;
+            el.style.paddingRight = 0;
           }
         } else {
           if (el.scrollHeight !== 0) {
             el.style.transition = this.verticalTransition;
-            el.style.height = '0';
-            el.style.paddingTop = '0';
-            el.style.paddingBottom = '0';
+            el.style.height = 0;
+            el.style.paddingTop = 0;
+            el.style.paddingBottom = 0;
           }
         }
       },

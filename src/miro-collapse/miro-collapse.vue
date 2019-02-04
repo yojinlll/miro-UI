@@ -1,6 +1,5 @@
 <template>
   <div class="miro-collapse">
-    {{select}}
     <slot></slot>
   </div>
 </template>
