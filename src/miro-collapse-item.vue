@@ -27,27 +27,23 @@
         required: true
       },
       name: {
-        type: String | Number,
+        type: String,
       }
     },
     mounted(){
       this.eventBus.$on('select', (select) => {
         this.miro = select
         if (select instanceof Array) {
-          select.indexOf(+this.name) >= 0 ? this.toggle = true : this.toggle = false
-        }else {
-          if (this.name === select || + this.name === + select) {
-            this.toggle = true
-          }
+          select.indexOf(this.name) >= 0 ? this.toggle = true : this.toggle = false
         }
       })
     },
     methods: {
       onClick(){
         if (this.toggle) {
-          this.eventBus.$emit('removeSelect', +this.name)
-        }else if(!this.toggle){
-          this.eventBus.$emit('addSelect', +this.name)
+          this.eventBus.$emit('removeSelect', this.name)
+        }else if (! this.toggle) {
+          this.eventBus.$emit('addSelect', this.name)
         }
       }
     },

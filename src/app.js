@@ -59,7 +59,7 @@ new Vue({
     load: true,
     text: 'boo',
     // showItem: [1,4]
-    showItem: [1,4]
+    showItem: ['4','1']
   },
   mounted(){
     // console.log(this.$children[4])

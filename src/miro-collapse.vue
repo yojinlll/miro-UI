@@ -31,13 +31,10 @@
       this.eventBus.$emit('select', this.select)
 
       this.eventBus.$on('addSelect', (name) => {
-        console.log(name)
+
         let selectedCopy = JSON.parse(JSON.stringify(this.select))
-        if(this.single){
-          selectedCopy = [name]
-        }else{
-          selectedCopy.push(name)
-        }
+        this.single ? selectedCopy = [name] : selectedCopy.push(name)
+
         this.eventBus.$emit('select', selectedCopy)
         this.$emit('update:select', selectedCopy)
       })
