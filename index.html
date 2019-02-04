@@ -188,7 +188,7 @@
     </miro-tabs>
   </div>
 
-  <div class="box" style="margin-left: 100px; height: 300px;">
+  <div class="box" style="margin-left: 100px;">
     <miro-popover position="top">
       <template slot="popover">
         hello,popover,死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团死歌团团
@@ -215,6 +215,16 @@
       </template>
       <miro-button>right</miro-button>
     </miro-popover>
+  </div>
+
+  <div class="box" style="margin-bottom: 100px;">
+    <miro-collapse single :select.sync=showItem single>
+      {{showItem}}
+      <miro-collapse-item title="hello,miro" name=1></miro-collapse-item>
+      <miro-collapse-item title="hello,boo" name=2></miro-collapse-item>
+      <miro-collapse-item title="hello,foo" name=3></miro-collapse-item>
+      <miro-collapse-item title="hello,muu" name=4></miro-collapse-item>
+    </miro-collapse>
   </div>
 
 </div>

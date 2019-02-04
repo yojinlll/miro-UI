@@ -23,6 +23,9 @@ import TabsPane from './miro-tabs-pane'
 
 import Popover from './miro-popover'
 
+import Collapse from './miro-collapse'
+import CollapseItem from './miro-collapse-item'
+
 
 Vue.component('miro-button', Button)
 Vue.component('miro-button-group', ButtonGroup)
@@ -43,6 +46,9 @@ Vue.component('miro-tabs-pane',TabsPane)
 
 Vue.component('miro-popover',Popover)
 
+Vue.component('miro-collapse',Collapse)
+Vue.component('miro-collapse-item',CollapseItem)
+
 // 测试
 // import '../test/chai-test/chai-test.js'
 
@@ -51,7 +57,9 @@ new Vue({
   data: {
     msg: 'hello,miro',
     load: true,
-    text: 'boo'
+    text: 'boo',
+    // showItem: [1,4]
+    showItem: [1,4]
   },
   mounted(){
     // console.log(this.$children[4])
