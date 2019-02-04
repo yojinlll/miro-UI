@@ -1,7 +1,7 @@
 const expect = chai.expect
 const assert = chai.assert
 import Vue from "vue"
-import Toast from '../src/miro-toast'
+import Toast from '../src/miro-toast/miro-toast'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false

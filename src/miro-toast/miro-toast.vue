@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import Icon from './miro-icon'
+  import Icon from '../miro-icon'
 
   export default {
     name: "miroToast",

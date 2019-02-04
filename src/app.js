@@ -1,30 +1,30 @@
 import Vue from 'vue'
 
-import Button from './miro-button.vue'
-import ButtonGroup from './miro-button-group'
+import Button from './miro-button/miro-button.vue'
+import ButtonGroup from './miro-button/miro-button-group'
 import Input from './miro-input'
 
-import Row from './miro-row'
-import Col from './miro-col'
+import Row from './miro-grid/miro-grid-row'
+import Col from './miro-grid/miro-grid-col'
 
-import Layout from './miro-layout'
-import Header from './miro-header'
+import Layout from './miro-layout/miro-layout'
+import Header from './miro-layout/miro-header'
 import Aside from './miro-aside'
-import Content from './miro-content'
-import Footer from './miro-footer'
+import Content from './miro-layout/miro-content'
+import Footer from './miro-layout/miro-footer'
 
-import toast from "./toastPlugin"
+import toast from "./miro-toast/toastPlugin"
 Vue.use(toast)
 
-import Tabs from './miro-tabs'
-import TabsHead from './miro-tabs-head'
-import TabsItem from './miro-tabs-item'
-import TabsPane from './miro-tabs-pane'
+import Tabs from './miro-tabs/miro-tabs'
+import TabsHead from './miro-tabs/miro-tabs-head'
+import TabsItem from './miro-tabs/miro-tabs-item'
+import TabsPane from './miro-tabs/miro-tabs-pane'
 
 import Popover from './miro-popover'
 
-import Collapse from './miro-collapse'
-import CollapseItem from './miro-collapse-item'
+import Collapse from './miro-collapse/miro-collapse'
+import CollapseItem from './miro-collapse/miro-collapse-item'
 
 
 Vue.component('miro-button', Button)
@@ -59,7 +59,7 @@ new Vue({
     load: true,
     text: 'boo',
     // showItem: [1,4]
-    showItem: ['4','1']
+    showItem: ['1']
   },
   mounted(){
     // console.log(this.$children[4])
