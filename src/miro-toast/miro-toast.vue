@@ -148,7 +148,7 @@
     }
 
     &.position-top-enter {
-      top: 5%;
+      top: 10%;
       animation: downSlide-enter $time;
     }
     &.position-top-leave {
@@ -172,7 +172,7 @@
 
   @keyframes downSlide-enter {
     0% { top: 0; opacity: 0;}
-    100% { top: 5%; opacity: 1;}
+    100% { top: 10%; opacity: 1;}
   }
 
   @keyframes downSlide-leave {

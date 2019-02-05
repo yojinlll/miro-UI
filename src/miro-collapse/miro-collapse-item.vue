@@ -74,9 +74,9 @@
           el.style.transition = this.verticalTransition;
           this.dataset.oldPaddingTop = el.style.paddingTop;
           this.dataset.oldPaddingBottom = el.style.paddingBottom;
-          el.style.height = 0;
-          el.style.paddingTop = 0;
-          el.style.paddingBottom = 0;
+          el.style.height = '0';
+          el.style.paddingTop = '0';
+          el.style.paddingBottom = '0';
       },
       enter(el) {
         this.dataset.oldOverflow = el.style.overflow;
@@ -86,9 +86,8 @@
           } else {
             el.style.height = '';
           }
-          el.style.paddingTop = this.dataset.oldPaddingTop;
-        console.log(el.style,222)
-        el.style.paddingBottom = this.dataset.oldPaddingBottom;
+          // el.style.paddingTop = '0';
+          // el.style.paddingBottom = '0';
 
         el.style.overflow = 'hidden';
       },
@@ -155,6 +154,6 @@
         border-bottom-right-radius: $border-radius;
       }
     }
-    .miro-collapse-content {padding: 8px;}
+    .miro-collapse-content {padding: 0 8px;}
   }
 </style>

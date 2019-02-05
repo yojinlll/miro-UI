@@ -1,0 +1,58 @@
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none}
+
+:root {
+    --button-height: 32px;
+    --font-size: 14px;
+    --button-bg: white;
+    --button-active-bg: #eee;
+    --border-radius: 6px;
+    --color: #444;
+    --border-color: #999;
+    --border-color-hover: #666;
+    --background-color: darkolivegreen;
+}
+
+body {font-size: var(--font-size); background: var(--background-color);}
+
+#app {margin: 10px; padding: 50px; border-radius: 6px; background: white;}
+
+.title{height: 50px; margin-bottom: 100px; color: var(--background-color); font-size: 50px}
+
+.box, .box-1 {margin-bottom: 100px;}
+
+.box-1 .miro-button {margin-bottom: 20px;}
+
+.box .box-input {margin-bottom: 20px; display: flex;}
+
+.box .box-input .miro-input:first-child {margin-right: 20px}
+
+.box .row-box {margin-bottom: 5px}
+
+.box .miro-row .miro-col {background: lightblue;height: 50px;border: 1px solid #6c6c6c;}
+
+.box .aside {width: 100px; background: coral;}
+
+.box .header {min-height: 70px; background: indianred;}
+
+.box .content { background: palegreen; flex: 1;}
+
+.box .footer {min-height: 70px; background: blueviolet;}
+
+@media (max-width: 500px) {
+    .box .miro-input {margin-bottom: 20px;}
+    .box .box-input {margin-bottom: 20px; display: block;}
+    .title{font-size: 40px}
+    
+}
+@media (min-width: 500px) {
+    .box-popover{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .box-tabs{width: 70%;}
+}

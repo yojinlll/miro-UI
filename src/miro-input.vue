@@ -59,6 +59,8 @@
     > input {
       color: $color;height: 32px;border: 1px solid $border-color;
       border-radius: $border-radius;padding: 0 8px;
+      outline: none;
+
 
       &:hover {border-color: $border-color-hover;}
       &:focus {box-shadow: inset 0 1px 3px;}
