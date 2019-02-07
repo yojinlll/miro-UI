@@ -44,7 +44,7 @@
     }
     .demo-code-content {
       background: $code-color;
-      padding: 30px 40px 30px 40px;
+      padding: 30px 40px 30px 20px;
       overflow-x: auto;
 
       span {line-height: 2em}
