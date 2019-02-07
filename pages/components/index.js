@@ -2,8 +2,8 @@ import Vue from 'vue'
 import router from './router/index'
 
 import Icon from '../../src/miro-icon'
-import pageButton from './page/page-button'
-import pageToast from './page/page-toast'
+import pageButton from '../page/page-button'
+import pageToast from '../page/page-toast'
 
 Vue.component('miro-page-button',pageButton)
 Vue.component('miro-page-toast',pageToast)

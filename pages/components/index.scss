@@ -1,6 +1,7 @@
 $color: #2c3e50;
-$border-color: #EAECEF;
+$border-color: #d1d3d6;
 $duration: .3s;
+$theme-color: #36b669;
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
 a {text-decoration: none; color: $color}
@@ -9,7 +10,6 @@ a {text-decoration: none; color: $color}
 
 .wrapper {
   color: $color;
-  height: 100vh;
 
   .navbar {
     padding: 10px 40px;
@@ -37,6 +37,7 @@ a {text-decoration: none; color: $color}
     height: 100vh;
     position: fixed;
     left: 0;
+    background: white;
     transition: all $duration;
 
     .sidebar-list {
@@ -49,32 +50,47 @@ a {text-decoration: none; color: $color}
       cursor: pointer;
 
       &:hover {
-        color: #36b669;
+        color: $theme-color;
       }
 
       &.active {
-        border-left: 4px solid #36b669;
+        border-left: 4px solid $theme-color;
         font-weight: 600;
-        color: #36b669;
+        color: $theme-color;
       }
 
     }
   }
 
-  .page {padding-left: 300px; transition: all $duration;}
+  .page {
+    padding-left: 300px; transition: all $duration;
+
+    .page-content{
+      padding: 2.5em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-nav{
+      height: 100px;
+      border-top: 1px solid $border-color;
+      text-align: center;
+    }
+
+    @media (max-width: 959px) {
+      .page-content{
+        padding: 2em;
+      }
+    }
+  }
 }
 
 @media (max-width: 720px) {
 
   .wrapper.toggle {
-
-    .sidebar {
-      transform: translateX(-100%);
-      transition: all $duration;
-    }
-    .page {padding-left: 0; transition: all $duration;}
-
+    .sidebar {transform: translateX(-100%);transition: all $duration;}
   }
+  .wrapper .page {padding-left: 0; transition: all $duration;}
   .wrapper .navbar .miro-icon {
     display: block;
     margin-right: .5em;
