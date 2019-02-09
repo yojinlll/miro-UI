@@ -3,24 +3,50 @@
     <h1>输入框</h1>
     <div class="demo-block">
       <h2>基础用法</h2>
-      <p>基础的按钮用法</p>
       <div class="demo">
         <div class="demo-row">
-          <miro-input ></miro-input>
+          <miro-input placeholder="占位符 placeholder"></miro-input>
+        </div>
+        <div class="demo-row">
+          <miro-input value="默认 value "></miro-input>
         </div>
         <demo-code :code="codeData.default"></demo-code>
       </div>
     </div>
-
     <div class="demo-block">
-      <h2>设置 icon </h2>
+      <h2>{{input}}</h2>
       <div class="demo">
         <div class="demo-row">
-          <miro-button icon="settings" loading>设置</miro-button>
-          <miro-button icon="info">提示</miro-button>
-          <miro-button icon="error">错误</miro-button>
+          <miro-input v-model="input"></miro-input>
         </div>
-        <demo-code :code="codeData.icon"></demo-code>
+        <demo-code :code="codeData.vModel"></demo-code>
+      </div>
+    </div>
+    <div class="demo-block">
+      <h2>禁用</h2>
+      <div class="demo">
+        <div class="demo-row">
+          <miro-input placeholder="hello,miro" disabled></miro-input>
+        </div>
+        <demo-code :code="codeData.disabled"></demo-code>
+      </div>
+    </div>
+    <div class="demo-block">
+      <h2>只读</h2>
+      <div class="demo">
+        <div class="demo-row">
+          <miro-input placeholder="hello,miro" readonly></miro-input>
+        </div>
+        <demo-code :code="codeData.readonly"></demo-code>
+      </div>
+    </div>
+    <div class="demo-block">
+      <h2>错误提示</h2>
+      <div class="demo">
+        <div class="demo-row">
+          <miro-input value="hello,miro" error="输入错误"></miro-input>
+        </div>
+        <demo-code :code="codeData.error"></demo-code>
       </div>
     </div>
 
@@ -33,41 +59,56 @@
   import mixin from '../mixin'
 
   let codeData = {
-    default: `<miro-button> 默认按钮 </miro-button>`,
-    icon: `<miro-button icon="settings" loading> 设置 </miro-button>
-<miro-button icon="info"> 提示 </miro-button>
-<miro-button icon="error"> 错误 </miro-button>`,
-    group: `<miro-button-group>
-  <miro-button icon="left">上一页</miro-button>
-  <miro-button>返回</miro-button>
-  <miro-button icon="right" icon-position="right">下一页</miro-button>
-</miro-button-group>`
+    default: `<miro-input placeholder="占位符 placeholder"></miro-input>
+<miro-input value="默认 value "></miro-input>`,
+    vModel:`<miro-input v-model="input"></miro-input>
+
+data: {
+  input: 'v-model'
+}`,
+    disabled: `<miro-input placeholder="hello,miro" disabled></miro-input>`,
+    readonly: `<miro-input placeholder="hello,miro" readonly></miro-input>`,
+    error: `<miro-input value="hello,miro" error="输入错误"></miro-input>`
   }
   for (let code in codeData) {
     codeData[code] = Prism.highlight(codeData[code], Prism.languages.html)
   }
 
   let attributes = {
-    icon: {
-      name: 'icon',
-      instructions: '设置 icon',
+    value: {
+      name: 'value',
+      instructions: '必填值，输入绑定值',
       type: 'String',
       optional: '——',
       default: '——'
     },
-    iconPosition: {
-      name: 'iconPosition',
-      instructions: '设置 icon 位置',
+    placeholder: {
+      name: 'placeholder',
+      instructions: '输入框占位文本',
       type: 'String',
-      optional: 'left / right',
-      default: 'left'
+      optional: '——',
+      default: '——'
     },
-    loading: {
-      name: 'loading',
-      instructions: '点击按钮 icon 切换成 loading ',
+    disabled: {
+      name: 'disabled',
+      instructions: '禁用',
+      type: 'Boolean',
+      optional: '——',
+      default: 'false'
+    },
+    readonly: {
+      name: 'readonly',
+      instructions: '只读',
+      type: 'Boolean',
+      optional: '——',
+      default: 'false'
+    },
+    error: {
+      name: 'error',
+      instructions: '提示错误信息',
       type: 'String',
-      optional: 'left / right',
-      default: 'left'
+      optional: '——',
+      default: '——'
     }
   }
 
@@ -76,6 +117,7 @@
     data(){
       return {
         showCode: false,
+        input: 'v-model',
         codeData,
         attributes
       }
@@ -84,7 +126,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $border-color: #d1d3d6;
 
   .demo {

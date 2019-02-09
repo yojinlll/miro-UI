@@ -176,7 +176,7 @@
   }
 
   @keyframes downSlide-leave {
-    0% { top: 5%; opacity: 1;}
+    0% { top: 10%; opacity: 1;}
     100% { top: 0; opacity: 0;}
   }
 

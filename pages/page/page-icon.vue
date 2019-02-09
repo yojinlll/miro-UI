@@ -69,7 +69,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $border-color: #d1d3d6;
 
   .demo {
@@ -96,7 +96,7 @@
         .demo-row {
           margin: 40px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           font-size: 1.5em;
 
           @media (max-width: 500px) {
@@ -107,11 +107,12 @@
         }
         .icon-list {
           li {
-            border-right: 1px solid $border-color;
-            border-bottom: 1px solid $border-color;
+            border: 1px solid $border-color;
             float: left;
             width: 6em;
             height: 6em;
+            margin-top: -1px;
+            margin-left: -1px;
             display: flex;
             flex-direction: column;
             justify-content: center;

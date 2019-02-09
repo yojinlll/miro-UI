@@ -69,7 +69,8 @@
 
       &:hover {border-color: $border-color-hover;}
       &:focus {box-shadow: inset 0 1px 3px;}
-      &[disabled], &[readonly] {border-color: #bbb;color: #bbb;cursor: not-allowed;}
+      &[disabled] {border-color: #bbb;color: #bbb; cursor: not-allowed;}
+      &[readonly] {border-color: #bbb;color: #bbb;}
     }
 
     &.error {

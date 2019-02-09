@@ -1,7 +1,7 @@
 <template>
   <div class="miro-collapse-item">
-    <div class="miro-collapse-title" @click="onClick" :style="isCenter">
-      {{title}}
+    <div class="miro-collapse-title" @click="onClick">
+      <slot name="title"></slot>
     </div>
 
     <transition @before-enter="beforeEnter"
@@ -41,23 +41,11 @@
       // horizontalTransition() {
       //   return `${+this.duration}ms width ease-in-out, ${+this.duration}ms padding-left ease-in-out, ${+this.duration}ms padding-right ease-in-out`;
       // }
-      isCenter(){
-        if(this.center){
-          return {justifyContent: 'center'}
-        }
-      }
     },
     props: {
-      title: {
-        type: String | Number,
-        required: true
-      },
       name: {
         type: String,
-      },
-      center:  {
-        type: Boolean,
-        default: false
+        required: true
       },
       duration: { type: [Number, String], default: 300 }
 
@@ -146,9 +134,6 @@
       background: white;
       margin: -1px;
       min-height: 32px;
-      display: flex;
-      align-items: center;
-      padding: 0 8px;
       cursor: pointer;
     }
     &:first-child {
@@ -163,6 +148,6 @@
         border-bottom-right-radius: $border-radius;
       }
     }
-    .miro-collapse-content {padding: 0 8px;}
+    /*.miro-collapse-content {padding: 0 8px;}*/
   }
 </style>

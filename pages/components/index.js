@@ -25,7 +25,7 @@ new Vue({
       'Grid',
       'Popover',
       'Tabs'
-    ]
+    ],
   },
   mounted(){
   },

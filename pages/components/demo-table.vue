@@ -1,6 +1,6 @@
 <template>
   <div class="demo-block">
-    <h2>Attributes</h2>
+    <h2>{{title}}</h2>
     <div style="overflow-x: auto;">
       <table class="table">
         <thead>
@@ -30,6 +30,10 @@
   export default {
     name: "demo-table",
     props: {
+      title: {
+        type: String,
+        default: 'Attributes'
+      },
       attributes: Object
     }
   }
@@ -37,9 +41,11 @@
 
 <style lang="scss" scoped>
   $border-color: #d1d3d6;
+.demo-block{
+  margin-top: 100px;
 
   .table {
-    margin: 40px 0;
+    margin: 20px 0;
     border-collapse: collapse;
     line-height: 1.8em;
     width: 100%;
@@ -47,6 +53,7 @@
 
     tr {border-bottom: 1px solid $border-color;}
     th {color: #8e9093; font-weight: 400;}
-    td, th {padding: 10px 20px; text-align: start; white-space: nowrap; max-width: 200px;}
+    td, th {padding: 10px 20px; text-align: start; max-width: 200px;}
   }
+}
 </style>

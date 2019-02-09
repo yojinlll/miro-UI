@@ -99,7 +99,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $border-color: #d1d3d6;
 
   .demo {
@@ -128,7 +128,7 @@
 
           @media (max-width: 500px) {
             & {
-              margin: 40px 10px;
+              margin: 40px 20px;
             }
           }
         }

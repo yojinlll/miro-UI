@@ -5,7 +5,7 @@ let toast
 export default {
   install(Vue){
     Vue.prototype.$toast = function (text,toastOptions){
-      if(toast && toastOptions.only){
+      if(toast && (toastOptions && toastOptions.only)){
         toast.onClose(0)
       }
 
