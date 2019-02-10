@@ -1,7 +1,7 @@
 $color: #2c3e50;
 $border-color: #d1d3d6;
 $duration: .3s;
-$theme-color: #36b669;
+$theme-color: #4aae5b;
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
 a {text-decoration: none; color: $color}
@@ -95,6 +95,7 @@ a {text-decoration: none; color: $color}
     display: block;
     margin-right: .5em;
     cursor: pointer;
+    color: $theme-color;
   }
 }
 

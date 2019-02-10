@@ -100,7 +100,7 @@
     </div>
 
     <demo-table title="Collapse Attributes" :attributes="attributes.collapse"></demo-table>
-    <demo-table class="second-table" title="Collapse Item Attributes"
+    <demo-table class="next-table" title="Collapse Item Attributes"
                 :attributes="attributes.collapseItem"></demo-table>
   </div>
 </template>
@@ -297,7 +297,7 @@ export default {
     }
   }
 
-  .second-table {
+  .next-table {
     margin-top: 50px;
   }
 

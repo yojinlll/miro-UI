@@ -38,10 +38,11 @@
         this.$refs.content.addEventListener('mouseenter', this.toggleVisible)
         this.$refs.content.addEventListener('mouseleave', this.toggleVisible)
       }else {
+
         this.$refs.popover.addEventListener('click', this.onClick)
       }
     },
-    destroyed(){
+    beforeDestroy(){
       if (this.trigger !== 'click') {
         this.$refs.popover.removeEventListener('mouseenter', this.open)
         this.$refs.popover.removeEventListener('mouseleave', this.close)

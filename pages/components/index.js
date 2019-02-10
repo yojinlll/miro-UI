@@ -17,17 +17,15 @@ new Vue({
     currentIndex: 0,
     isToggle: true,
     sidebarList: [
-      'Button',
       'Icon',
+      'Button',
       'Input',
-      'Toast',
-      'Collapse',
+      'Tabs',
       'Grid',
       'Popover',
-      'Tabs'
+      'Toast',
+      'Collapse',
     ],
-  },
-  mounted(){
   },
   methods: {
     select(item,index){

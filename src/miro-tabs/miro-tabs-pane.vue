@@ -32,7 +32,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $color: rgba(110, 191, 126, 0.24);
+  $color: #f9f9f9;
 
   .miro-pane-active {
     border-radius: 6px;

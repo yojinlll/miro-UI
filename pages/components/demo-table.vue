@@ -53,7 +53,7 @@
 
     tr {border-bottom: 1px solid $border-color;}
     th {color: #8e9093; font-weight: 400;}
-    td, th {padding: 10px 20px; text-align: start; max-width: 200px;}
+    td, th {padding: 10px 20px; text-align: start; min-width: 100px;}
   }
 }
 </style>

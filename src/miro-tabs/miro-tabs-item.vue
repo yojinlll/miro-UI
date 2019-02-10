@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $color: rgba(110, 191, 126, 0.24);
+  $color: #f9f9f9;
 
   .miro-tabs-item {
     /*border: 1px solid yellowgreen;*/

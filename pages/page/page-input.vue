@@ -3,6 +3,7 @@
     <h1>输入框</h1>
     <div class="demo-block">
       <h2>基础用法</h2>
+      <p>定义占位符或 value 。</p>
       <div class="demo">
         <div class="demo-row">
           <miro-input placeholder="占位符 placeholder"></miro-input>
@@ -15,6 +16,7 @@
     </div>
     <div class="demo-block">
       <h2>{{input}}</h2>
+      <p>使用双向绑定。</p>
       <div class="demo">
         <div class="demo-row">
           <miro-input v-model="input"></miro-input>

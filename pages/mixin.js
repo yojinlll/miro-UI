@@ -13,6 +13,15 @@ Vue.use(Plugin)
 
 import Collapse from '../src/miro-collapse/miro-collapse'
 import CollapseItem from '../src/miro-collapse/miro-collapse-item'
+import Popover from '../src/miro-popover'
+
+import Tabs from '../src/miro-tabs/miro-tabs'
+import TabsPane from '../src/miro-tabs/miro-tabs-pane'
+import TabsItem from '../src/miro-tabs/miro-tabs-item'
+import TabsHead from '../src/miro-tabs/miro-tabs-head'
+
+import GridRow from '../src/miro-grid/miro-grid-row'
+import GridCol from '../src/miro-grid/miro-grid-col'
 
 const mixin = {
   components: {
@@ -25,6 +34,15 @@ const mixin = {
     'miro-input': Input,
     'miro-collapse': Collapse,
     'miro-collapse-item': CollapseItem,
+    'miro-popover': Popover,
+
+    'miro-tabs': Tabs,
+    'miro-tabs-head': TabsHead,
+    'miro-tabs-item': TabsItem,
+    'miro-tabs-pane': TabsPane,
+
+    'miro-row': GridRow,
+    'miro-col': GridCol,
   }
 }
 
