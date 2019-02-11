@@ -7,7 +7,7 @@
         <div class="demo-row">
           <miro-tabs :select.sync="activeNames">
             <miro-tabs-head slot="head">
-              <miro-tabs-item name="one">One</miro-tabs-item>
+              <miro-tabs-item class="" name="one">One</miro-tabs-item>
               <miro-tabs-item name="two">Two</miro-tabs-item>
               <miro-tabs-item name="three">Three</miro-tabs-item>
               <miro-tabs-item name="four">Four</miro-tabs-item>
@@ -140,6 +140,9 @@
     }
   }
 
+  @media (max-width: 500px) {
+    .miro-tabs-item{padding: 0 0.2em !important; }
+  }
   .next-table {
     margin-top: 50px;
   }

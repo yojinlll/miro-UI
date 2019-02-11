@@ -1,21 +1,19 @@
 import Vue from 'vue'
 import router from './router/index'
 
-import Icon from '../../src/miro-icon'
-import pageButton from '../page/page-button'
-import pageToast from '../page/page-toast'
+import {miro} from '../../src/miro-ui'
 
-Vue.component('miro-page-button',pageButton)
-Vue.component('miro-page-toast',pageToast)
-Vue.component('miro-icon',Icon)
+Vue.use(miro)
 
 new Vue({
   el: '#app',
   router,
   data: {
     title: 'Miro',
-    currentIndex: 0,
-    isToggle: true,
+    currentIndex: - 2,    /* 用于激活<li>样式 */
+    currentRoute: '',     /* 用于确认 */
+    isToggle: true,       /* 用于控制菜单icon。宽度不足720px时，出现菜单icon */
+    iconToggle: true,
     sidebarList: [
       'Icon',
       'Button',
@@ -25,14 +23,35 @@ new Vue({
       'Popover',
       'Toast',
       'Collapse',
-    ],
+    ]
   },
-  methods: {
-    select(item,index){
-      this.currentIndex = index
-      this.$router.push(item.toLowerCase())
-      this.isToggle = true
+  computed: {
+    prevRoute(){
+      if (this.sidebarList.indexOf(this.currentRoute) >= 0) {
+        return this.sidebarList[this.sidebarList.indexOf(this.currentRoute) - 1]
+      }
+    },
+    nextRoute(){
+      if (this.sidebarList.indexOf(this.currentRoute) >= 0) {
+        return this.sidebarList[this.sidebarList.indexOf(this.currentRoute) + 1]
+      }
     }
   },
+  mounted(){
+
+  },
+  methods: {
+    select(item, index){
+      this.isToggle = true
+      this.$router.push({name: item.toLowerCase()})
+      this.currentIndex = index
+      this.currentRoute = item
+    },
+    goRoute(item){
+      this.$router.push(item.toLowerCase())
+      this.currentIndex = this.sidebarList.indexOf(item)
+      this.currentRoute = item
+    }
+  }
 
 })

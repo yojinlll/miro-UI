@@ -4,9 +4,10 @@ $duration: .3s;
 $theme-color: #4aae5b;
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
-a {text-decoration: none; color: $color}
-[v-cloak]{display: none}
 
+a {text-decoration: none; color: $color}
+
+[v-cloak] {display: none}
 
 .wrapper {
   color: $color;
@@ -24,7 +25,7 @@ a {text-decoration: none; color: $color}
     display: flex;
     align-items: center;
 
-    .miro-icon{display: none;}
+    .miro-icon {display: none;}
     .miro-icon, .site-name {
       font-size: 1.5em;
     }
@@ -40,45 +41,90 @@ a {text-decoration: none; color: $color}
     background: white;
     transition: all $duration;
 
-    .sidebar-list {
-      margin-top: 50px;
+    .sidebar-part {
+      margin-top: 20px;
+      padding-top: 0.1px;
+
+      .sidebar-part-item {
+        margin-top: 20px;
+        padding-left: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
     }
+
+    .miro-collapse {
+      margin-top: 20px;
+      border: none;
+      .miro-collapse-title {
+        border: none;
+        width: 100%;
+        padding-left: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        font-weight: 600;
+
+        .collapse-button {
+          display: flex;
+          align-items: center;
+          .miro-icon {
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .sidebar-list {margin-top: 10px;}
 
     .sidebar-list > li {
       transition: all $duration;
       padding: 5px 40px;
       cursor: pointer;
 
-      &:hover {
-        color: $theme-color;
-      }
+      &:hover {color: $theme-color;}
+    }
 
-      &.active {
-        border-left: 4px solid $theme-color;
-        font-weight: 600;
-        color: $theme-color;
-      }
-
+    .active {
+      border-left: 4px solid $theme-color;
+      font-weight: 600;
+      color: $theme-color;
     }
   }
 
   .page {
     padding-left: 300px; transition: all $duration;
 
-    .page-content{
+    .page-content {
       padding: 2.5em;
       max-width: 800px;
       margin: 0 auto;
     }
 
-    .page-nav{
+    .page-nav {
       height: 100px;
       border-top: 1px solid $border-color;
       text-align: center;
+
+      .inner {
+        //border: 1px solid black;
+        width: 90%;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+
+        > span {
+          color: $theme-color;
+          font-weight: 600;
+          //border: 1px solid black;
+          cursor: pointer;
+        }
+      }
     }
 
     @media (max-width: 959px) {
-      .page-content{
+      .page-content {
         padding: 2em;
       }
     }

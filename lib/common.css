@@ -14,9 +14,11 @@ body {font-size: var(--font-size); background: var(--background-color);}
 
 #app {margin: 10px; padding: 50px; border-radius: 6px; background: white;}
 
-.title{height: 50px; margin-bottom: 100px; color: var(--background-color); font-size: 50px; display: inline-block;}
+.title {line-height: 50px; margin-bottom: 150px; color: var(--background-color); font-size: 50px;}
+.title .icon-wrapper{background: var(--background-color); border-radius: 4px; height: 50px; width: 50px; display: inline-flex; justify-content: center; align-items: center}
+.title .icon-wrapper .miro-icon{color:white; font-size: .8em}
 
-.box, .box-1 {margin-bottom: 100px;}
+.box, .box-1 {margin-bottom: 80px;}
 
 .box-1 .miro-button {margin-bottom: 20px;}
 
@@ -37,18 +39,25 @@ body {font-size: var(--font-size); background: var(--background-color);}
 .box .footer {min-height: 70px; background: blueviolet;}
 
 @media (max-width: 500px) {
+    #app {padding: 50px 10px;}
+    
     .box .miro-input {margin-bottom: 20px;}
+    
     .box .box-input {margin-bottom: 20px; display: block;}
-    .title{font-size: 40px}
+    
+    .title {font-size: 40px;text-align: center}
+    
     
 }
+
 @media (min-width: 500px) {
-    .box-popover{
+    .box-popover {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
         display: flex;
         justify-content: space-around;
     }
-    .box-tabs{width: 70%;}
+    
+    .box-tabs {width: 70%;}
 }

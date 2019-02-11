@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Input from '../../src/miro-input'
+import Input from '../../src/miro-input/miro-input'
 
 import chai from 'chai'
 

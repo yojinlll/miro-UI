@@ -22,18 +22,40 @@
       </a>
     </header>
     <aside class="sidebar">
-      <ul class="sidebar-list">
-        <li v-for="(item,index) in sidebarList" @click="select(item,index)" :class="{active: index===currentIndex}">
-          {{item}}
-        </li>
-      </ul>
+      <div class="sidebar-part">
+        <div class="sidebar-part-item" @click="select('introduce',-2)" :class="{active: currentIndex===-2}">
+          介绍
+        </div>
+        <div class="sidebar-part-item" @click="select('guide',-1)" :class="{active: currentIndex===-1}">
+          使用指南
+        </div>
+      </div>
+      <miro-collapse :select="['1']">
+        <miro-collapse-item name="1">
+          <template slot="title">
+            <div class="collapse-button" @click="iconToggle = !iconToggle">
+              组件
+              <miro-icon icon="right" v-if="!iconToggle"></miro-icon>
+              <miro-icon icon="down" v-else="iconToggle"></miro-icon>
+            </div>
+          </template>
+          <ul class="sidebar-list">
+            <li v-for="(item,index) in sidebarList" @click="select(item,index)" :class="{active: index===currentIndex}">
+              {{item}}
+            </li>
+          </ul>
+        </miro-collapse-item>
+      </miro-collapse>
     </aside>
     <div class="page">
       <div class="page-content">
         <router-view></router-view>
       </div>
       <div class="page-nav">
-        good
+        <div class="inner">
+          <span class="prev" @click="goRoute(prevRoute)">{{prevRoute}}</span>
+          <span class="next" @click="goRoute(nextRoute)">{{nextRoute}}</span>
+        </div>
       </div>
     </div>
   </div>

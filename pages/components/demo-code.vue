@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import Icon from '../../src/miro-icon'
+  import Icon from '../../src/miro-icon/miro-icon'
 
   export default {
     name: "demo-code",
@@ -44,8 +44,12 @@
     }
     .demo-code-content {
       background: $code-color;
-      padding: 30px 40px 30px 20px;
+      padding: 30px 40px 30px 40px;
       overflow-x: auto;
+
+      @media (max-width: 500px) {
+        padding: 30px 40px 30px 20px;
+      }
 
       span {line-height: 2em}
     }

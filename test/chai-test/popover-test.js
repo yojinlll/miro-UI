@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Popover from '../../src/miro-popover'
+import Popover from '../../src/miro-popover/miro-popover'
 
 import chai from 'chai'
 import spies from "chai-spies"

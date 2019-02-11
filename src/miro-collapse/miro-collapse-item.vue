@@ -47,7 +47,7 @@
         type: String,
         required: true
       },
-      duration: { type: [Number, String], default: 300 }
+      duration: { type: [Number, String], default: 200 }
 
     },
     mounted(){

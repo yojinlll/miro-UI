@@ -21,6 +21,7 @@
 
     <div class="demo-block">
       <h2>设置 position </h2>
+      <p>默认上方弹出，可设置左、下、右。</p>
       <div class="demo">
         <div class="demo-row">
           <miro-popover position="left">

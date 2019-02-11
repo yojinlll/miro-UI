@@ -1,7 +1,7 @@
 const expect = chai.expect
 const assert = chai.assert
 import Vue from 'vue'
-import Input from '../src/miro-input'
+import Input from '../src/miro-input/miro-input'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Icon from '../miro-icon'
+  import Icon from '../miro-icon/miro-icon'
 
   export default {
     name: "miroButton",
