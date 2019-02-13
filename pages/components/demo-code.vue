@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import Icon from '../../src/miro-icon/miro-icon'
+  import Icon from '../../src/miro/miro-icon/miro-icon'
 
   export default {
     name: "demo-code",

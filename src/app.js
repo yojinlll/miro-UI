@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {miro} from './miro-ui'
+import {miro} from './miro/miro-ui'
 Vue.use(miro)
 
 // 测试

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import router from './router/index'
 
-import {miro} from '../../src/miro-ui'
+import {miro} from '../../src/miro/miro-ui'
 
 Vue.use(miro)
 

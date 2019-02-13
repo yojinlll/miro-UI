@@ -1,7 +1,7 @@
 const expect = chai.expect;
 const assert = chai.assert;
 import Vue from 'vue'
-import Button from '../src/miro-button/miro-button'
+import Button from '../src/miro/miro-button/miro-button'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false

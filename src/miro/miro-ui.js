@@ -1,4 +1,4 @@
-import {Icon} from "./miro-Icon/index.js"
+import {Icon} from "./miro-icon/index.js"
 import {Button} from "./miro-button/index.js"
 import {Input} from "./miro-input/index.js"
 import {Popover} from "./miro-popover/index.js"

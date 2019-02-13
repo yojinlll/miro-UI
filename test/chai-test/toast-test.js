@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Toast from '../../src/miro-toast/miro-toast'
+import Toast from '../../src/miro/miro-toast/miro-toast'
 
 import chai from 'chai'
 import spies from "chai-spies"
