@@ -1,15 +1,15 @@
-#笔记
+# 笔记
 
 <br>
 
-###Button
+## Button
 	
 	1. vertical-align: middle
 	2. display: inline-flex; oreder: 1/2, 利用 order 排列顺序
 
 <br>
 
-###Input
+## Input
 
     1. v-if
     2. $emit/$on
@@ -17,7 +17,7 @@
     
 <br>
 
-###row & col
+## row & col
 
     1. 使用 scss 的 插值语法 和 for 语法
     2. 响应式的设计(层级覆盖)
@@ -29,7 +29,7 @@
         
 <br>
 
-###toast 
+## toast 
     1. 要考虑如何去使用这个toast，参考了ele，所以使用的是插件引入的方式去使用，在原型上添加生成 toast 组件的方法，通过调用这个方法在页面中添加 toast ;
     2. 动画方面
     
@@ -37,14 +37,14 @@
 	       
 <br>
 
-###tabs
+## tabs
 
 		1. 通过修饰符，改动 props；
 		2. 需要用到 eventHub，所以利用 provide/inject 将一个 Vue 实例作为可以接收事件触发和事件监听的对象。
  
 <br>
  
-###popover
+## popover
 
     1. 思考这个轮子的触发方式，不适合选择事件流的方式实现，因为这样也会阻止了使用者在组件上绑定点击事件，于是通过原生JS的添加监听器和移除监听器去实现，每点击一下便添加一个点击文档就关闭 popover 的监听器，同时关闭 popover 时将这个监听器给移除。
     2. 样式问题，生成的 popover 需要在触发元素的四周，所以需要获取 scrollX/scrollY 以及 触发元素的位置 来做位置判断。
@@ -53,7 +53,7 @@
 
 <br>
 
-###collapse
+## collapse
 
     1. 一开始是通过简单的 v-if 实现
     2. 但要考虑 更新props 和 初始展示选项 的话，就复杂起来了，于是使用到了单项数据流的形式去更新。
@@ -63,7 +63,7 @@
    
 <br>
     
-###测试
+## 测试
         
     1. 引入 chai
     2. 使用 chai 的断言 expect
@@ -74,4 +74,5 @@
     4. 配合 mocha 测试框架 （describe/it）
     5. 配合 karma 浏览器唤起（karma.conf.json 中配置好 mocha & sinon-chai）
     6. 自动化测试（测试失败）
-    以上组成框架测试
+    
+        以上组成框架测试
