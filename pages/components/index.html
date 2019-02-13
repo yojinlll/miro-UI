@@ -14,12 +14,19 @@
 <div id="app" v-cloak>
   <div class="wrapper" :class="{toggle: isToggle}">
     <header class="navbar">
-      <span @click="isToggle = !isToggle">
-        <miro-icon icon="list"></miro-icon>
-      </span>
-      <a href="../../index.html">
-        <span class="site-name">{{title}}</span>
-      </a>
+      <div class="left-part">
+        <span @click="isToggle = !isToggle">
+          <miro-icon icon="list"></miro-icon>
+        </span>
+        <a href="../../index.html">
+          <span class="site-name">{{title}}</span>
+        </a>
+      </div>
+      <div class="right-part">
+        <a href="https://github.com/yojinlll/miro-UI">
+          <miro-icon icon="github"></miro-icon>
+        </a>
+      </div>
     </header>
     <aside class="sidebar">
       <div class="sidebar-part">

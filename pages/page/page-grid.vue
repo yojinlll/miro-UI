@@ -95,8 +95,8 @@
             <miro-col span="12" phone="18">Phone</miro-col>
           </miro-row>
           <miro-row gutter="5">
-            <miro-col span="12" phone="12" ipad="12">Phone</miro-col>
-            <miro-col span="12" :phone="{span:6,offset:6}" :ipad="{span:6,offset:6}">
+            <miro-col span="12" phone="12" ipad="6">Phone</miro-col>
+            <miro-col span="12" :phone="{span:6,offset:6}" :ipad="{span:12,offset:6}">
               IPad
             </miro-col>
           </miro-row>
@@ -200,8 +200,8 @@
   <miro-col span="12" phone="18">Phone</miro-col>
 </miro-row>
 <miro-row gutter="5">
-  <miro-col span="12" phone="12" ipad="12">Phone</miro-col>
-  <miro-col span="12" :phone="{span:6,offset:6}" :ipad="{span:6,offset:6}">
+  <miro-col span="12" phone="12" ipad="6">Phone</miro-col>
+  <miro-col span="12" :phone="{span:6,offset:6}" :ipad="{span:12,offset:6}">
     IPad
   </miro-col>
 </miro-row>`

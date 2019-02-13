@@ -53,7 +53,8 @@
       return {
         showCode: false,
         codeData,
-        allIcon: ['info','error','list','close','download','thumbs-up','settings','up','down','left','right','delete','check','share','star','click'],
+        allIcon: ['info','error','list','close','download','thumbs-up','settings',
+          'up','down','left','right','delete','check','share','star','click','github'],
         attributes: {
           icon: {
             name: 'icon',

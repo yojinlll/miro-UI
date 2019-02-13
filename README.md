@@ -6,18 +6,6 @@
 	
 	1. vertical-align: middle
 	2. display: inline-flex; oreder: 1/2, 利用 order 排列顺序
-		
-    3. 怎么写测试？
-    
-        引入 chai
-        使用 chai 的断言 expect
-        通过 $mount 挂载实例，获取实例上需要测试的属性，将其与预期值做判断
-        符合预期则通过测试
-        vm.$el.remove()	vm.$destory
-        
-        配合 mocha 测试框架 （describe/it）
-        配合 karma 浏览器唤起（karma.conf.json 中配置好 mocha & sinon-chai）
-	    以上组成自动测试
 
 <br>
 
@@ -71,3 +59,19 @@
     2. 但要考虑 更新props 和 初始展示选项 的话，就复杂起来了，于是使用到了单项数据流的形式去更新。
             子组件通过父组件上的props决定一开始展现哪一项
                 点击子组件关闭或展开该项时，更新父组件的props，由此再更新子组件
+    3. 使用了 transition 标签去实现动画，不过动画的代码基本参考element的collapse动画组件。
+   
+<br>
+    
+###测试
+        
+    1. 引入 chai
+    2. 使用 chai 的断言 expect
+    3. 通过 $mount 挂载实例，获取实例上需要测试的属性，将其与预期值做判断，符合预期则通过测试
+    
+        vm.$el.remove()	vm.$destory
+    
+    4. 配合 mocha 测试框架 （describe/it）
+    5. 配合 karma 浏览器唤起（karma.conf.json 中配置好 mocha & sinon-chai）
+    6. 自动化测试（测试失败）
+    以上组成框架测试
