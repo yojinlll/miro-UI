@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../reset.800429eb.css">
+  <link rel="stylesheet" href="../../components.01df316e.css">
+  <link rel="stylesheet" href="../../prism-coy.c38bf665.css">
+  <title>miro</title>
+<script src="../../components.01df316e.js"></script><script src="../../prism-coy.c38bf665.js"></script><link rel="stylesheet" href="../../components.a397efd6.css"></head>
+<body>
+<div id="app" v-cloak="">
+  <div class="wrapper" :class="{toggle: isToggle}">
+    <header class="navbar">
+      <div class="left-part">
+        <span @click="isToggle = !isToggle">
+          <miro-icon icon="list"></miro-icon>
+        </span>
+        <a href="../../index.html">
+          <span class="site-name">{{title}}</span>
+        </a>
+      </div>
+      <div class="right-part">
+        <a href="https://github.com/yojinlll/miro-UI">
+          <miro-icon icon="github"></miro-icon>
+        </a>
+      </div>
+    </header>
+    <aside class="sidebar">
+      <div class="sidebar-part">
+        <div class="sidebar-part-item" @click="select('introduce',-2)" :class="{active: currentIndex===-2}">
+          介绍
+        </div>
+        <div class="sidebar-part-item" @click="select('guide',-1)" :class="{active: currentIndex===-1}">
+          使用指南
+        </div>
+      </div>
+      <miro-collapse :select="['1']">
+        <miro-collapse-item name="1">
+          <template slot="title">
+            <div class="collapse-button" @click="iconToggle = !iconToggle">
+              组件
+              <miro-icon icon="right" v-if="!iconToggle"></miro-icon>
+              <miro-icon icon="down" v-else="iconToggle"></miro-icon>
+            </div>
+          </template>
+          <ul class="sidebar-list">
+            <li v-for="(item,index) in sidebarList" @click="select(item,index)" :class="{active: index===currentIndex}">
+              {{item}}
+            </li>
+          </ul>
+        </miro-collapse-item>
+      </miro-collapse>
+    </aside>
+    <div class="page">
+      <div class="page-content">
+        <router-view></router-view>
+      </div>
+      <div class="page-nav">
+        <div class="inner">
+          <span class="prev" @click="goRoute(prevRoute)">{{prevRoute}}</span>
+          <span class="next" @click="goRoute(nextRoute)">{{nextRoute}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../../components.a397efd6.js"></script>
+</body>
+</html>
